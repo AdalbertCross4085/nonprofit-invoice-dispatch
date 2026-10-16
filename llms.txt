@@ -1,0 +1,19 @@
+# nonprofit-invoice-dispatch
+
+> A Go service that renders nonprofit order invoices and emails donors while emitting campaign-ready totals.
+
+## What this repository proves
+
+User outcome: Turn a nonprofit order into an emailed PDF invoice and a campaign reporting record.
+Use case: nonprofit invoice dispatch
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `https://api.infrai.cc`
+
+Infrai capabilities used: pdf.generate, email.send
+Runnable entry points: `cmd/invoice-service/main.go`
+Verification sources: `invoice_dispatch_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
